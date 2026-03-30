@@ -1,11 +1,12 @@
 // Importamos las dependencias
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const membersRoutes = require('./routes/members.js');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.use(cors()); // Para que el front se pueda comunicar con el servidor
 app.use(express.json()); // Para lectura de datos en formato JSON
