@@ -10,16 +10,6 @@ const dataPath = path.join(__dirname, '../data/members.json');
 
 // RUTAS
 
-// Registrar un socio: POST
-router.post('/items', (req, res) => {
-    
-});
-
-// Loguear un socio: POST
-router.post('/items', (req, res) => {
-    
-});
-
 // Obtener todos los socios: GET
 router.get('/items', (req, res) => {
     const members = JSON.parse(fs.readFileSync(dataPath, 'utf-8')); //lee los datos de los socios existentes
@@ -40,7 +30,7 @@ router.put('/items/:id', (req, res) => {
     const { id } = req.params;
     const updateMember = req.body;
     let members = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-    members = members.map(member => { member.id === id ? updateMember : member });
+    members = members.map(member => ( member.id == id ? updateMember : member ));
     fs.writeFileSync(dataPath, JSON.stringify(members, null, 2));
     res.json({ message: 'Socio actualizado.', member: updateMember });
 });
@@ -49,7 +39,7 @@ router.put('/items/:id', (req, res) => {
 router.delete('/items/:id', (req, res) => {
     const { id } = req.params;
     let members = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-    members = members.filter(member => member.id !== id);
+    members = members.filter(member => member.id != id);
     fs.writeFileSync(dataPath, JSON.stringify(members, null, 2));
     res.json({ message: 'Socio eliminado.' });
 });

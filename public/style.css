@@ -2,11 +2,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #84bbe9;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 850px;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -21,25 +21,29 @@ h1 {
 form {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 form input, form button {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #59a8d9;
     border-radius: 4px;
 }
 
 table {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 table th, table td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
+}
+
+table th {
+    background-color: #f4f4f9;
 }
 
 button {
@@ -51,5 +55,5 @@ button {
     background-color: red;
     border: none;
     padding: 5px 10px;
-    border-radius: 4;
+    border-radius: 4px;
 }
