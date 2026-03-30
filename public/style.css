@@ -46,7 +46,7 @@ button {
     cursor: pointer
 }
 
-delete-btn {
+.delete-btn {
     color: white;
     background-color: red;
     border: none;
