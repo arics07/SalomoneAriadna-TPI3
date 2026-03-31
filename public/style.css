@@ -2,14 +2,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #84bbe9;
+    background-color: #9dcaee;
 }
 
 .container {
     max-width: 850px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: #daf0f0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
 }
@@ -50,10 +50,19 @@ button {
     cursor: pointer
 }
 
-.delete-btn {
+.edit-btn {
     color: white;
-    background-color: red;
+    background-color: rgb(100, 189, 90);
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
 }
+
+.delete-btn {
+    color: white;
+    background-color: rgb(251, 30, 30);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+

@@ -29,10 +29,10 @@
   },
   {
     "id": 1774921802446,
-    "nro": 123,
+    "number": 123,
     "name": "Santiago Wall",
     "email": "wall@ggmailgg.com",
-    "status": "Activo"
+    "status": "Inactivo"
   },
   {
     "id": 1774922245328,
@@ -40,19 +40,5 @@
     "name": "Pipi",
     "email": "pipi@store.com",
     "status": "Inactivo"
-  },
-  {
-    "id": 1774922278801,
-    "nro": 999,
-    "name": "artnhjrt",
-    "email": "wall@ggtrahjrthmailgg.com",
-    "status": "Activo"
-  },
-  {
-    "id": 572457245762561,
-    "nro": 88658,
-    "name": "artnh22y54yrt",
-    "email": "wall@ggtrahjrthmailgg.com",
-    "status": "Activortjartja"
   }
 ]
