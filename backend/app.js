@@ -5,7 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const bodyParser = require("body-parser");
 const membersRoutes = require('./routes/membersRoutes.js');
-const usersRoutes = require('./routes/authRoutes.js')
+const authRoutes = require('./routes/authRoutes.js')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,7 +17,9 @@ app.use(express.json()); // Para lectura de datos en formato JSON
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Rutas API
-app.use('/api/members', membersRoutes);
+app.use('/api/members', membersRoutes); //Para el CRUD de socios del club
+app.use('/users', authRoutes); //Para el registro y login de usuarios del sistema
+
 
 // Ruta para manejar cualquier solicitud
 app.use((req, res) => {

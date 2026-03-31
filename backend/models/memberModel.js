@@ -13,10 +13,7 @@ function readData(){
 
 //Guardar archivo
 function writeData(data){
-   fs.writeFileSync(
-      dataPath,
-      JSON.stringify(data, null, 2)
-   );
+   fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
 }
 
 
