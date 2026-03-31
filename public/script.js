@@ -1,4 +1,4 @@
-const API_URL = '/items'; //URL base para las solicitiudes
+const API_URL = '/api/members'; //URL base para las solicitiudes
 
 const form = document.getElementById('member-form');
 // es el id del form en el archivo html --> //formulario para agregar contactos
