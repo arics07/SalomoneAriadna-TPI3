@@ -1,19 +1,25 @@
 const jwt = require('jsonwebtoken');
 
-//Middleware para proteger rutas
 function authenticateToken(req, res, next) {
-    // El token se envía en el header "Authorization" con formato "Bearer TOKEN"
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1]; // toma el token después de "Bearer"
+    const authHeader = req.headers.authorization;
 
-    if (!token) return res.status(401).json({ message: 'Acceso denegado: no hay token' });
+    // Verifica formato "Bearer TOKEN"
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(401).json({ message: 'Acceso denegado: token faltante o mal formado' });
+    };
 
-    jwt.verify(token, process.env.JWT_SECRET || 'secretkey', (err, user) => {
-        if (err) return res.status(403).json({ message: 'Token inválido' });
+    const token = authHeader.split(' ')[1];
 
-        req.user = user; //agregamos info del usuario a la request
-        next(); //pasa al siguiente middleware o ruta
-    });
+    if (!token) return res.status(401).json({ error: 'Token requerido' });
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'secretkey');
+        req.user = decoded; //información del usuario disponible en controllers
+        next();
+
+    } catch (error) {
+        return res.status(403).json({ message: 'Token inválido o expirado' });
+    }
 }
 
 module.exports = authenticateToken;

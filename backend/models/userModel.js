@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const bcrypt = require("bcrypt");
 
 const dataPath = path.join(__dirname, "../data/users.json");
 
@@ -21,12 +20,18 @@ exports.findUserByEmail = (email) => {
     return users.find(user => user.email === email);
 };
 
-//Crear un nuevo usuario (con contraseña hasheada)
-exports.createUser = async ({ email, password }) => {
+//Crear un nuevo usuario (recibe password hasheada)
+exports.createUser = ({ email, password }) => {
     const users = readUsers();
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = { id: Date.now(), email, password: hashedPassword };
+
+    const newUser = {
+        id: Date.now(),
+        email,
+        password // ya viene hasheada desde el controller
+    };
+
     users.push(newUser);
     writeUsers(users);
+
     return newUser;
 };
