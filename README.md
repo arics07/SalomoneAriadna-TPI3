@@ -52,25 +52,31 @@ Las rutas de /api/members están protegidas excepto los GET.
 POST /users/register
 
 Body:
+```json
 {
   "email": "usuario@mail.com",
   "password": "123456"
 }
+```
 
 ---
 
 POST /users/login
 
 Body:
+```json
 {
   "email": "usuario@mail.com",
   "password": "123456"
 }
+```
 
 Respuesta:
+```json
 {
   "token": "JWT_TOKEN"
 }
+```
 
 ---
 
@@ -93,12 +99,14 @@ Authorization: Bearer TOKEN
 Content-Type: application/json
 
 Body:
+```json
 {
   "number": 11866,
   "name": "León Salomone",
   "email": "leon@mail.com",
   "status": "Activo"
 }
+```
 
 ---
 
@@ -108,9 +116,11 @@ Headers:
 Authorization: Bearer TOKEN
 
 Body:
+```json
 {
   "status": "Inactivo"
 }
+```
 
 ---
 
@@ -119,7 +129,7 @@ DELETE /api/members/:id → Eliminar socio (requiere token)
 ---
 
 ## 📦 Modelo de socio
-
+```json
 {
   "id": "1774917884020",
   "number": 11866,
@@ -127,16 +137,18 @@ DELETE /api/members/:id → Eliminar socio (requiere token)
   "email": "leon@mail.com",
   "status": "Activo"
 }
+```
 
 ---
 
 ## 👤 Modelo de usuario
-
+```json
 {
   "id": "1776041120672",
   "email": "user@mail.com",
   "password": "HASH"
 }
+```
 
 ---
 
@@ -149,7 +161,7 @@ DELETE /api/members/:id → Eliminar socio (requiere token)
 
 ---
 
-## ⚠️ Notas importantes
+## ⚠️ Información importante
 
 - Base de datos en archivo JSON
 - IDs generados con Date.now()
