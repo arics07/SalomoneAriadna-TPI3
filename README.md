@@ -149,7 +149,7 @@ DELETE /api/members/:id → Eliminar socio (requiere token)
 
 ---
 
-## ⚠️ Notas importantes
+## ⚠️ Información importante
 
 - Base de datos en archivo JSON
 - IDs generados con Date.now()
