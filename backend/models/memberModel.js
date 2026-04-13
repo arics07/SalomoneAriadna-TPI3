@@ -26,7 +26,7 @@ exports.getAllMembers = () => {
 //Crear socio
 exports.createMember = (memberData) => {
    const members = readData();
-   const newMember = { id: Date.now(), ...memberData };
+   const newMember = { id: String(Date.now()), ...memberData };
 
    members.push(newMember);
    writeData(members);
@@ -44,7 +44,8 @@ exports.getMemberById = (id) => {
 //Actualizar un socio
 exports.updateMember = (id, newData) => {
    const members = readData();
-   const index = members.findIndex(member => member.id == id);
+   //const index = members.findIndex(member => member.id == id);
+   const index = members.findIndex(member => String(member.id) === String(id));
 
    if(index === -1) return null;
    members[index] = {...members[index], ...newData};

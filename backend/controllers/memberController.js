@@ -10,6 +10,9 @@ exports.getAllMembers = (req, res) => {
 //Crear un nuevo socio
 exports.createMember = (req, res) => {
    const newMember = memberModel.createMember(req.body);
+
+   console.log("BODY:", req.body); // 👈 acá
+
    res.status(201).json(newMember);
 };
 
@@ -28,7 +31,13 @@ exports.getMemberById = (req, res) => {
 //Actualizar socio
 exports.updateMember = (req, res) => {
    const id = req.params.id;
+
+   console.log("BODY:", req.body); // 👈 acá
+
    const updated = memberModel.updateMember(id, req.body);
+   if (!updated) {
+      return res.status(404).json({ error: "Socio no encontrado" });
+   };
    res.json(updated);
 };
 

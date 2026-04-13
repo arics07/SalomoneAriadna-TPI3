@@ -14,20 +14,6 @@
     "status": "Activo"
   },
   {
-    "id": 1774920416311,
-    "number": "7777",
-    "name": "Leo Messi",
-    "email": "leomessi@arg.com",
-    "status": "Activo"
-  },
-  {
-    "id": 1774921199190,
-    "number": 1456,
-    "name": "Tamara",
-    "email": "tami@mail.com",
-    "status": "Activo"
-  },
-  {
     "id": 1774927794400,
     "number": "3467345",
     "name": "Mantecol",
@@ -40,12 +26,5 @@
     "name": "Pipi",
     "email": "pipi@ytj.com",
     "status": "Inactivo"
-  },
-  {
-    "id": 1775441233224,
-    "number": "45735",
-    "name": "Andrea",
-    "email": "sedv@gsd.com",
-    "status": "Activo"
   }
 ]
