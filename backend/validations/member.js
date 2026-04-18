@@ -7,4 +7,4 @@ const memberSchema = z.object({
   status: z.string().min(1)
 });
 
-module.exports = { memberSchema };
+module.exports = memberSchema;

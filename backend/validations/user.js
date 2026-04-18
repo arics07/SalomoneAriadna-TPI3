@@ -5,4 +5,4 @@ const userSchema = z.object({
     password: z.string().min(6, "La contraseña debe tener al menos 4 caracteres")
 });
 
-module.exports = { userSchema };
+module.exports = userSchema;
