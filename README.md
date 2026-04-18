@@ -171,6 +171,6 @@ DELETE /api/members/:id → Eliminar socio (requiere token)
 
 ---
 
-## 👨‍💻 Autor
+## 👩‍💻 Autora
 
 Proyecto realizado por Ariadna Salomone.
