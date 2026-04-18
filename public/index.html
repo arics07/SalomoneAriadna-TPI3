@@ -9,12 +9,12 @@
 <body>
     <div class="container">
         <h1>Lista de socios 🎾</h1>
-        <form id="member-form" action="">
+            <form id="member-form" action="">
             <input type="text" id="number" placeholder="N° socio" required>
             <input type="text" id="name" placeholder="Nombre" required>
             <input type="email" id="email" placeholder="Email" required>
             <input type="text" id="status" placeholder="Estado" required>
-            <button type="submit">Agregar socio</button>
+            <button class="add-btn">Agregar</button>
         </form>
 
         <table>
@@ -24,7 +24,6 @@
                     <th>Nombre</th>
                     <th>Email</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="members-table"></tbody>

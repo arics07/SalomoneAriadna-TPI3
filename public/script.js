@@ -18,10 +18,6 @@ function renderMembers(members) {
             <td>${member.name}</td>
             <td>${member.email}</td>
             <td>${member.status}</td>
-            <td>
-                <button class="delete-btn" onclick="deleteMember('${member.id}')">Eliminar</button>
-                <button class="edit-btn" onclick="populateForm('${member.id}')">Editar</button>
-            </td>
         </tr>
     `).join('');
 }
